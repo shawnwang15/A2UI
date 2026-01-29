@@ -1,0 +1,33 @@
+{
+  "name": "vue-orchestrator",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "serve:agent": "cd ../../../agent/adk/orchestrator && uv run .",
+    "demo": "concurrently -k -n \"AGENT,WEB\" -c \"magenta,blue\" \"npm run serve:agent\" \"npm run dev\""
+  },
+  "dependencies": {
+    "@a2a-js/sdk": "^0.3.4",
+    "@a2ui/vue": "file:../../../../../renderers/vue",
+    "@a2ui/web_core": "file:../../../../../renderers/web_core",
+    "chart.js": "^4.5.1",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "uuid": "^13.0.0",
+    "vue": "^3.4.0",
+    "vue-chartjs": "^5.3.2"
+  },
+  "devDependencies": {
+    "@types/google.maps": "^3.58.1",
+    "@types/node": "^20.17.19",
+    "@types/uuid": "^10.0.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "concurrently": "^9.2.1",
+    "typescript": "~5.9.2",
+    "vite": "^6.0.0",
+    "vue-tsc": "^2.2.0"
+  }
+}
