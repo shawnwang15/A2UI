@@ -15,7 +15,7 @@
  */
 
 import * as Types from '@a2ui/web_core/types/types';
-import type { Catalog } from '../rendering/catalog';
+import type { Catalog } from '@/rendering/catalog';
 
 import Row from './A2UIRow.vue';
 import Column from './A2UIColumn.vue';

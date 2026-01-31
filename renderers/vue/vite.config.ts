@@ -25,14 +25,18 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [
-      vue(),
+      vue(
+          {
+              template: {
+                  compilerOptions: {
+                      // 将所有带短横线的标签名都视为自定义元素
+                      isCustomElement: (tag) => tag.includes('a2ui-')
+                  }
+              }
+          }
+      ),
       ...(isLib
-        ? [
-            dts({
-              insertTypesEntry: true,
-              rollupTypes: true,
-            }),
-          ]
+        ? [dts({ rollupTypes: true })]
         : []),
     ],
     root: isLib ? '.' : resolve(projectRoot, 'src/examples'),

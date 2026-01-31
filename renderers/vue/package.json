@@ -10,13 +10,15 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
-    }
+    },
+    "./dist/*": "./dist/*",
+    "./dist/vue.css": "./dist/vue.css"
   },
   "type": "module",
   "scripts": {
     "dev": "vite",
     "dev:examples": "vite",
-    "build": "vite build --mode lib && vue-tsc --emitDeclarationOnly",
+    "build": "vite build --mode lib",
     "build:examples": "vite build",
     "preview": "vite preview",
     "preview:examples": "vite preview --outDir dist-examples",
@@ -38,7 +40,7 @@
     "@vitejs/plugin-vue": "^5.2.1",
     "typescript": "~5.9.2",
     "vite": "^6.0.0",
-    "vite-plugin-dts": "^4.3.0",
+    "vite-plugin-dts": "4.5.4",
     "vue": "^3.4.0",
     "vue-tsc": "^2.2.0"
   },

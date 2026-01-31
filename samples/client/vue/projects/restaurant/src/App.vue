@@ -15,7 +15,7 @@
  -->
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onUnmounted } from 'vue';
 import { provideA2UI, DEFAULT_CATALOG, A2UISurface } from '@a2ui/vue';
 import * as Types from '@a2ui/web_core/types/types';
 import { useClient } from './client';

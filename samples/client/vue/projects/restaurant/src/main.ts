@@ -16,6 +16,7 @@
 
 import { createApp } from 'vue';
 import App from './App.vue';
+import '@a2ui/vue/dist/vue.css';
 import './styles.css';
 
 createApp(App).mount('#app');

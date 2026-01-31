@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import * as Types from '@a2ui/web_core/types/types';
-import { useDynamicComponent } from '../rendering/useDynamicComponent';
+import { useDynamicComponent } from '@/rendering/useDynamicComponent';
 
 const props = defineProps<{
   surfaceId: Types.SurfaceID | null;

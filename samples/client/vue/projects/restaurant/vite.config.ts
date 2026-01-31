@@ -17,9 +17,18 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
+import { createA2AMiddleware } from './server';
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    {
+      name: 'configure-server',
+      configureServer(server) {
+        server.middlewares.use(createA2AMiddleware());
+      },
+    },
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -27,17 +36,5 @@ export default defineConfig({
   },
   server: {
     port: 4000,
-    proxy: {
-      '/a2a': {
-        target: 'http://localhost:10002',
-        changeOrigin: true,
-        rewrite: (path) => path,
-        configure: (proxy, _options) => {
-          proxy.on('proxyReq', (proxyReq, _req, _res) => {
-            proxyReq.setHeader('X-A2A-Extensions', 'https://a2ui.org/a2a-extension/a2ui/v0.8');
-          });
-        },
-      },
-    },
   },
 });

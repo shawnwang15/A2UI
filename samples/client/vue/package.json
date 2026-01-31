@@ -1,0 +1,18 @@
+{
+  "name": "@a2ui/vue-samples",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "serve:agent:restaurant": "cd ../../agent/adk/restaurant_finder && uv run .",
+    "build:renderer": "cd ../../../renderers/web_core && npm install && npm run build && cd ../vue && npm install && npm run build",
+    "demo:restaurant": "npm install && npm run build:renderer && concurrently -k -n \"AGENT,WEB\" -c \"magenta,blue\" \"npm run serve:agent:restaurant\" \"npm run dev\""
+  },
+  "dependencies": {
+    "@a2ui/web_core": "file:../../../renderers/web_core",
+    "@a2ui/vue": "file:../../../renderers/vue"
+  }
+}

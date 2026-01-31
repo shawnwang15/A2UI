@@ -18,8 +18,8 @@
 import { ref, computed } from 'vue';
 import * as Types from '@a2ui/web_core/types/types';
 import * as Styles from '@a2ui/web_core/styles/index';
-import { useDynamicComponent } from '../rendering/useDynamicComponent';
-import A2UiRenderer from '../rendering/A2UIRenderer.vue';
+import { useDynamicComponent } from '@/rendering/useDynamicComponent';
+import A2UiRenderer from '@/rendering/A2UIRenderer.vue';
 
 const props = defineProps<{
   surfaceId: Types.SurfaceID | null;

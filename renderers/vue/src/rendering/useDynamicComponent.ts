@@ -14,7 +14,6 @@
  limitations under the License.
  */
 
-import { inject, computed } from 'vue';
 import * as Primitives from '@a2ui/web_core/types/primitives';
 import * as Types from '@a2ui/web_core/types/types';
 import { useA2UIConfig } from '../config';

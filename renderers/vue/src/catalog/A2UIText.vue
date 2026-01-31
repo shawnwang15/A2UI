@@ -19,7 +19,7 @@ import { computed } from 'vue';
 import * as Primitives from '@a2ui/web_core/types/primitives';
 import * as Styles from '@a2ui/web_core/styles/index';
 import * as Types from '@a2ui/web_core/types/types';
-import { useDynamicComponent } from '../rendering/useDynamicComponent';
+import { useDynamicComponent } from '@/rendering/useDynamicComponent';
 import { useMarkdownRenderer } from '../data/markdown';
 
 interface HintedStyles {
@@ -74,7 +74,6 @@ const resolvedText = computed(() => {
       value = String(value);
       break;
   }
-
   return markdownRenderer.render(
     value,
     Styles.appendToAll(theme.markdown, ['ol', 'ul', 'li'], {}),
@@ -120,26 +119,26 @@ function areHintedStyles(styles: unknown): styles is HintedStyles {
 </script>
 
 <template>
-  <div class="a2ui-text">
+  <a2ui-text>
     <section
       :class="classes"
       :style="additionalStyles"
       v-html="resolvedText"
-    />
-  </div>
+    >
+    </section>
+  </a2ui-text>
 </template>
 
-<style scoped>
-.a2ui-text {
+<style>
+a2ui-text{
   display: block;
   flex: v-bind(props.weight);
 }
-
-.a2ui-text :deep(h1),
-.a2ui-text :deep(h2),
-.a2ui-text :deep(h3),
-.a2ui-text :deep(h4),
-.a2ui-text :deep(h5) {
+a2ui-text h1,
+a2ui-text h2,
+a2ui-text h3,
+a2ui-text h4,
+a2ui-text h5 {
   line-height: inherit;
   font: inherit;
 }
