@@ -32,15 +32,15 @@ const resolvedUrl = computed(() => resolvePrimitive(props.url));
 </script>
 
 <template>
-  <div class="a2ui-audio">
+  <a2ui-audio>
     <section v-if="resolvedUrl" :class="theme.components.AudioPlayer" :style="theme.additionalStyles?.AudioPlayer">
       <audio is="audio" controls :src="resolvedUrl" />
     </section>
-  </div>
+  </a2ui-audio>
 </template>
 
 <style scoped>
-.a2ui-audio {
+a2ui-audio {
   display: block;
   flex: v-bind(props.weight);
   min-height: 0;

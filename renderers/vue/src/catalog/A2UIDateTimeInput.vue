@@ -100,7 +100,7 @@ function handleInput(event: Event) {
 </script>
 
 <template>
-  <div class="a2ui-datetime-input">
+  <a2ui-datetime-input>
     <section :class="theme.components.DateTimeInput.container">
       <label :for="inputId" :class="theme.components.DateTimeInput.label">
         {{ label }}
@@ -116,11 +116,11 @@ function handleInput(event: Event) {
         @input="handleInput"
       />
     </section>
-  </div>
+  </a2ui-datetime-input>
 </template>
 
 <style scoped>
-.a2ui-datetime-input {
+a2ui-datetime-input {
   display: block;
   flex: v-bind(props.weight);
   min-height: 0;

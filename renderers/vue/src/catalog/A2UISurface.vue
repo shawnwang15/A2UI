@@ -67,17 +67,17 @@ const styles = computed<CSSProperties>(() => {
 </script>
 
 <template>
-  <div class="a2ui-surface" :style="styles">
+  <a2ui-surface  :style="styles">
     <A2UiRenderer
       v-if="surfaceId && surface?.componentTree"
       :surface-id="surfaceId"
       :component="surface.componentTree"
     />
-  </div>
+  </a2ui-surface>
 </template>
 
 <style scoped>
-.a2ui-surface {
+a2ui-surface {
   display: flex;
   min-height: 0;
   max-height: 100%;

@@ -47,7 +47,7 @@ function handleInput(event: Event) {
 </script>
 
 <template>
-  <div class="a2ui-slider">
+  <a2ui-slider>
     <section :class="theme.components.Slider.container">
       <label :class="theme.components.Slider.label" :for="inputId">
         {{ label }}
@@ -65,11 +65,11 @@ function handleInput(event: Event) {
         :style="theme.additionalStyles?.Slider"
       />
     </section>
-  </div>
+  </a2ui-slider>
 </template>
 
 <style scoped>
-.a2ui-slider {
+a2ui-slider {
   display: block;
   flex: v-bind(props.weight);
 }

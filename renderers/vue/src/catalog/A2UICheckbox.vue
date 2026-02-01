@@ -46,7 +46,7 @@ function handleChange(event: Event) {
 </script>
 
 <template>
-  <div class="a2ui-checkbox">
+  <a2ui-checkbox>
     <section
       :class="theme.components.CheckBox.container"
       :style="theme.additionalStyles?.CheckBox"
@@ -64,11 +64,11 @@ function handleChange(event: Event) {
         {{ resolvedLabel }}
       </label>
     </section>
-  </div>
+  </a2ui-checkbox>
 </template>
 
 <style scoped>
-.a2ui-checkbox {
+a2ui-checkbox {
   display: block;
   flex: v-bind(props.weight);
   min-height: 0;

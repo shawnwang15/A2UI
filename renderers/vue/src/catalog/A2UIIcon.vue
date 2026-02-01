@@ -33,15 +33,15 @@ const resolvedName = computed(() => resolvePrimitive(props.name));
 </script>
 
 <template>
-  <div class="a2ui-icon">
+  <a2ui-icon>
     <section v-if="resolvedName" :class="theme.components.Icon" :style="theme.additionalStyles?.Icon">
       <span class="g-icon">{{ resolvedName }}</span>
     </section>
-  </div>
+  </a2ui-icon>
 </template>
 
 <style scoped>
-.a2ui-icon {
+a2ui-icon {
   display: block;
   flex: v-bind(props.weight);
   min-height: 0;

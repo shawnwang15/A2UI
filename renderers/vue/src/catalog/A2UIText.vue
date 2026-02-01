@@ -16,6 +16,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import DOMPurify from 'dompurify';
 import * as Primitives from '@a2ui/web_core/types/primitives';
 import * as Styles from '@a2ui/web_core/styles/index';
 import * as Types from '@a2ui/web_core/types/types';
@@ -74,10 +75,11 @@ const resolvedText = computed(() => {
       value = String(value);
       break;
   }
-  return markdownRenderer.render(
-    value,
-    Styles.appendToAll(theme.markdown, ['ol', 'ul', 'li'], {}),
-  );
+
+  return DOMPurify.sanitize(markdownRenderer.render(
+      value,
+      Styles.appendToAll(theme.markdown, ['ol', 'ul', 'li'], {}),
+  ));
 });
 
 const classes = computed(() => {

@@ -36,7 +36,7 @@ function handleClick() {
 </script>
 
 <template>
-  <div class="a2ui-button" :style="{ '--weight': weight }">
+  <a2ui-button>
     <button
       :class="theme.components.Button"
       :style="theme.additionalStyles?.Button"
@@ -47,11 +47,11 @@ function handleClick() {
         :component="component.properties.child"
       />
     </button>
-  </div>
+  </a2ui-button>
 </template>
 
 <style scoped>
-.a2ui-button {
+a2ui-button {
   display: block;
   flex: v-bind(weight);
   min-height: 0;

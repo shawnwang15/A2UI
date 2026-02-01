@@ -53,34 +53,33 @@ function closeDialog() {
 </script>
 
 <template>
-  <div class="a2ui-modal" :style="{ '--weight': weight }">
-    <dialog
+  <dialog
       v-if="showDialog"
       ref="dialogRef"
       :class="theme.components.Modal.backdrop"
       @click="handleDialogClick"
-    >
-      <section :class="theme.components.Modal.element" :style="theme.additionalStyles?.Modal">
-        <div class="controls">
-          <button @click="closeDialog">
-            <span class="g-icon">close</span>
-          </button>
-        </div>
+  >
+    <section :class="theme.components.Modal.element" :style="theme.additionalStyles?.Modal">
+      <div class="controls">
+        <button @click="closeDialog">
+          <span class="g-icon">close</span>
+        </button>
+      </div>
 
-        <A2UiRenderer
+      <A2UiRenderer
           :surface-id="surfaceId!"
           :component="component.properties.contentChild"
-        />
-      </section>
-    </dialog>
-
-    <section v-else @click="showDialog = true">
+      />
+    </section>
+  </dialog>
+  <a2ui-modal>
+    <section  @click="showDialog = true">
       <A2UiRenderer
           :surface-id="surfaceId!"
           :component="component.properties.entryPointChild"
         />
     </section>
-  </div>
+  </a2ui-modal>
 </template>
 
 <style scoped>

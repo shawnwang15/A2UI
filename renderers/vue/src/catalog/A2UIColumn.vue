@@ -43,9 +43,7 @@ const classes = computed(() => {
 </script>
 
 <template>
-  <div
-    class="a2ui-column"
-  >
+  <a2ui-column>
     <section :class="classes" :style="theme.additionalStyles?.Column">
       <A2UiRenderer
         v-for="(child, index) in component.properties.children"
@@ -54,11 +52,11 @@ const classes = computed(() => {
         :component="child"
       />
     </section>
-  </div>
+  </a2ui-column>
 </template>
 
 <style scoped>
-.a2ui-column {
+a2ui-column {
   display: flex;
   flex: v-bind(props.weight);
 }

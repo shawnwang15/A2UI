@@ -43,8 +43,7 @@ const classes = computed(() => {
 </script>
 
 <template>
-  <div
-    class="a2ui-row"
+  <a2ui-row
     :data-alignment="alignment"
     :data-distribution="distribution"
   >
@@ -56,11 +55,11 @@ const classes = computed(() => {
         :component="child"
       />
     </section>
-  </div>
+  </a2ui-row>
 </template>
 
 <style scoped>
-.a2ui-row {
+a2ui-row {
   display: flex;
   flex: v-bind(props.weight);
 }

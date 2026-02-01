@@ -36,7 +36,10 @@ export default defineConfig(({ mode }) => {
           }
       ),
       ...(isLib
-        ? [dts({ rollupTypes: true })]
+        ? [dts({
+            rollupTypes: true,
+            exclude: ['src/examples/**', 'node_modules/**']
+          })]
         : []),
     ],
     root: isLib ? '.' : resolve(projectRoot, 'src/examples'),

@@ -47,7 +47,7 @@ const buttonClasses = computed(() => {
 </script>
 
 <template>
-  <div class="a2ui-tabs">
+  <a2ui-tabs>
     <section :class="theme.components.Tabs.container" :style="theme.additionalStyles?.Tabs">
       <div :class="theme.components.Tabs.element">
         <button
@@ -66,7 +66,7 @@ const buttonClasses = computed(() => {
         :component="tabs[selectedIndex].child"
       />
     </section>
-  </div>
+  </a2ui-tabs>
 </template>
 
 <style scoped>

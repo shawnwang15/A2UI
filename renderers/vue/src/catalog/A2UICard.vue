@@ -35,34 +35,34 @@ const children = computed(() => {
 </script>
 
 <template>
-  <div class="a2ui-card">
+  <a2ui-card>
     <section :class="theme.components.Card" :style="theme.additionalStyles?.Card">
       <A2UiRenderer
         v-for="(child, index) in children"
-        :key="child.id || index"
+        :key="child.id || (child.type + '-' +index)"
         :surface-id="surfaceId!"
         :component="child"
       />
     </section>
-  </div>
+  </a2ui-card>
 </template>
 
 <style scoped>
-.a2ui-card {
+a2ui-card {
   display: block;
   flex: v-bind(props.weight);
   min-height: 0;
   overflow: auto;
 }
 
-.a2ui-card > section {
+a2ui-card > section {
   height: 100%;
   width: 100%;
   min-height: 0;
   overflow: auto;
 }
 
-.a2ui-card > section > :deep(*) {
+a2ui-card > section > :deep(*) {
   height: 100%;
   width: 100%;
 }

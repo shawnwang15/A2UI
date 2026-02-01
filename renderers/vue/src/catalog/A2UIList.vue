@@ -30,8 +30,7 @@ const { theme } = useDynamicComponent(props);
 </script>
 
 <template>
-  <div
-    class="a2ui-list"
+  <a2ui-list
     :data-direction="direction ?? 'vertical'"
   >
     <section :class="theme.components.List" :style="theme.additionalStyles?.List">
@@ -42,22 +41,22 @@ const { theme } = useDynamicComponent(props);
         :component="child"
       />
     </section>
-  </div>
+  </a2ui-list>
 </template>
 
 <style scoped>
-.a2ui-list {
+a2ui-list {
   display: block;
   flex: v-bind(props.weight);
   min-height: 0;
   overflow: auto;
 }
 
-.a2ui-list[data-direction='vertical'] section {
+a2ui-list[data-direction='vertical'] section {
   display: grid;
 }
 
-.a2ui-list[data-direction='horizontal'] section {
+a2ui-list[data-direction='horizontal'] section {
   display: flex;
   max-width: 100%;
   overflow-x: scroll;
@@ -65,7 +64,7 @@ const { theme } = useDynamicComponent(props);
   scrollbar-width: none;
 }
 
-.a2ui-list[data-direction='horizontal'] section > :deep(*) {
+a2ui-list[data-direction='horizontal'] section > :deep(*) {
   flex: 1 0 fit-content;
   max-width: min(80%, 400px);
 }

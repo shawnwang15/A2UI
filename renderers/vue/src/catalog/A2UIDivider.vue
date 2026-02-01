@@ -28,13 +28,13 @@ const { theme } = useDynamicComponent(props);
 </script>
 
 <template>
-  <div class="a2ui-divider">
+  <a2ui-divider>
     <hr :class="theme.components.Divider" :style="theme.additionalStyles?.Divider" />
-  </div>
+  </a2ui-divider>
 </template>
 
 <style scoped>
-.a2ui-divider {
+a2ui-divider {
   display: block;
   min-height: 0;
   overflow: auto;

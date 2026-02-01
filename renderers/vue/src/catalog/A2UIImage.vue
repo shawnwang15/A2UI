@@ -44,15 +44,15 @@ const classes = computed(() => {
 </script>
 
 <template>
-  <div class="a2ui-image">
+  <a2ui-image>
     <section v-if="resolvedUrl" :class="classes" :style="theme.additionalStyles?.Image">
       <img :src="resolvedUrl" />
     </section>
-  </div>
+  </a2ui-image>
 </template>
 
 <style scoped>
-.a2ui-image {
+a2ui-image {
   display: block;
   flex: v-bind(props.weight);
   min-height: 0;

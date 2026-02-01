@@ -50,7 +50,7 @@ function handleChange(event: Event) {
 </script>
 
 <template>
-  <div class="a2ui-multiple-choice">
+  <a2ui-multiple-choice>
     <section :class="theme.components.MultipleChoice.container">
       <label :class="theme.components.MultipleChoice.label" :for="selectId">
         {{ description }}
@@ -72,11 +72,11 @@ function handleChange(event: Event) {
         </option>
       </select>
     </section>
-  </div>
+  </a2ui-multiple-choice>
 </template>
 
 <style scoped>
-.a2ui-multiple-choice {
+a2ui-multiple-choice {
   display: block;
   flex: v-bind(props.weight);
   min-height: 0;

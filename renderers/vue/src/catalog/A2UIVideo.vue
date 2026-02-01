@@ -33,15 +33,15 @@ const resolvedUrl = computed(() => resolvePrimitive(props.url));
 </script>
 
 <template>
-  <div class="a2ui-video">
+  <a2ui-video>
     <section v-if="resolvedUrl" :class="theme.components.Video" :style="theme.additionalStyles?.Video">
       <video controls :src="resolvedUrl" />
     </section>
-  </div>
+  </a2ui-video>
 </template>
 
 <style scoped>
-.a2ui-video {
+a2ui-video {
   display: block;
   flex: v-bind(props.weight);
   min-height: 0;

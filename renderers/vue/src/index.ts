@@ -28,26 +28,8 @@ export { DEFAULT_CATALOG } from './catalog/default';
 
 // Component exports
 export { default as A2UISurface } from './catalog/A2UISurface.vue';
-export { default as A2UIRow } from './catalog/A2UIRow.vue';
-export { default as A2UIColumn } from './catalog/A2UIColumn.vue';
-export { default as A2UICard } from './catalog/A2UICard.vue';
-export { default as A2UIText } from './catalog/A2UIText.vue';
-export { default as A2UIButton } from './catalog/A2UIButton.vue';
-export { default as A2UIImage } from './catalog/A2UIImage.vue';
-export { default as A2UIIcon } from './catalog/A2UIIcon.vue';
-export { default as A2UIList } from './catalog/A2UIList.vue';
-export { default as A2UIDivider } from './catalog/A2UIDivider.vue';
-export { default as A2UITextField } from './catalog/A2UITextField.vue';
-export { default as A2UICheckbox } from './catalog/A2UICheckbox.vue';
-export { default as A2UISlider } from './catalog/A2UISlider.vue';
-export { default as A2UIMultipleChoice } from './catalog/A2UIMultipleChoice.vue';
-export { default as A2UIDateTimeInput } from './catalog/A2UIDateTimeInput.vue';
-export { default as A2UITabs } from './catalog/A2UITabs.vue';
-export { default as A2UIModal } from './catalog/A2UIModal.vue';
-export { default as A2UIAudio } from './catalog/A2UIAudio.vue';
-export { default as A2UIVideo } from './catalog/A2UIVideo.vue';
 
 // Re-export types from @a2ui/web_core
-export type * as Types from '@a2ui/web_core/types/types';
-export type * as Primitives from '@a2ui/web_core/types/primitives';
-export * as Styles from '@a2ui/web_core/styles/index';
+// export type * as Types from '@a2ui/web_core/types/types';
+// export type * as Primitives from '@a2ui/web_core/types/primitives';
+// export * as Styles from '@a2ui/web_core/styles/index';

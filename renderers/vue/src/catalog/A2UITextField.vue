@@ -47,7 +47,7 @@ function handleInput(event: Event) {
 </script>
 
 <template>
-  <div class="a2ui-text-field">
+  <a2ui-text-field>
     <section :class="theme.components.TextField.container">
       <label
         v-if="resolvedLabel"
@@ -68,11 +68,11 @@ function handleInput(event: Event) {
         :type="inputType === 'number' ? 'number' : 'text'"
       />
     </section>
-  </div>
+  </a2ui-text-field>
 </template>
 
 <style scoped>
-.a2ui-text-field {
+a2ui-text-field {
   display: flex;
   flex: v-bind(props.weight);
 }

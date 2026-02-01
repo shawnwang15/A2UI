@@ -81,6 +81,10 @@ class MarkdownRenderer {
       }
 
       const key = `${tokenName}_open`;
+      if(this.originalClassMap.has(key)){
+        return;
+      }
+
       const original = this.markdownIt.renderer.rules[key];
       this.originalClassMap.set(key, original);
 
