@@ -52,23 +52,21 @@ export default defineConfig(({ mode }) => {
             fileName: (format) => `index.${format === 'es' ? 'mjs' : 'js'}`,
           },
           rollupOptions: {
-            external: ['vue', '@a2ui/web_core', 'markdown-it'],
+            external: ['vue', '@a2ui/web_core'],
             output: {
               globals: {
                 vue: 'Vue',
-                '@a2ui/web_core': 'A2UIWebCore',
-                'markdown-it': 'MarkdownIt',
+                '@a2ui/web_core': 'A2UIWebCore'
               },
             },
-          },
+          }
         }
       : {
           outDir: resolve(__dirname, 'dist-examples'),
         },
     resolve: {
       alias: {
-        '@': resolve(projectRoot, 'src'),
-        'src': resolve(projectRoot, 'src'),
+        '@': resolve(projectRoot, 'src')
       },
     },
     server: {
