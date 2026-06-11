@@ -1,9 +1,9 @@
 {
-  "name": "basic-mcp-app-angular",
+  "name": "basic-mcp-app-angular-editor",
   "version": "1.0.0",
   "dependencies": {
-    "@a2ui/angular": "file:../../../../../../renderers/angular/dist",
-    "@a2ui/markdown-it": "file:../../../../../../renderers/markdown/markdown-it",
+    "@a2ui/angular": "workspace:*",
+    "@a2ui/markdown-it": "workspace:*",
     "@angular/common": "^21.2.0",
     "@angular/compiler": "^21.2.0",
     "@angular/core": "^21.2.0",
@@ -23,6 +23,10 @@
   "scripts": {
     "build": "ng build --output-path=../dist/raw --configuration production",
     "inline": "node ../inline.js --input ../dist/raw --output ../public/editor.html",
-    "build:all": "npm run build && npm run inline"
+    "build:all": "yarn run build && yarn run inline",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "tsc -p tsconfig.app.json --noEmit",
+    "test": "node -e 'const fs=require(\"fs\"); const path=require(\"path\"); function find(d){for(const f of fs.readdirSync(d)){const p=path.join(d,f);if(f===\"node_modules\"||f===\"dist\")continue;if(fs.statSync(p).isDirectory()){if(find(p))return true;}else if(f.includes(\".test.\")||f.includes(\".spec.\"))return true;}return false;} if(find(\".\")){require(\"child_process\").execSync(\"vitest run\",{stdio:\"inherit\"});}else{console.log(\"Workspace has no tests.\");}'"
   }
 }

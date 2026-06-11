@@ -44,7 +44,7 @@ ChartJS.register(ChartDataLabels);
 @Component({
   selector: 'a2ui-chart',
   imports: [BaseChartDirective, MatIconButton, MatIcon],
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styles: `
     :host {
       display: block;
@@ -272,7 +272,6 @@ export class Chart extends DynamicComponent<Types.CustomNode> {
     if (!active || active.length === 0) return;
 
     // active[0] for pie chart contains the data index that was clicked
-    // @ts-ignore -- ActiveElement typing can vary between versions
     const dataIndex: number | undefined = (active[0] as any).index;
     const labels = [...(this.currentData()?.labels ?? [])];
     const label = labels && typeof dataIndex === 'number' ? labels[dataIndex] : undefined;

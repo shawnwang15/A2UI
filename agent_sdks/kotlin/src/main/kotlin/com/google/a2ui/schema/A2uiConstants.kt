@@ -26,6 +26,10 @@ object A2uiConstants {
   const val CATALOG_ID_KEY = "catalogId"
   const val CATALOG_STYLES_KEY = "styles"
 
+  @JvmField
+  val DEFAULT_CUTTABLE_KEYS =
+    setOf("literalString", "valueString", "label", "hint", "caption", "altText", "text")
+
   // Protocol constants
   const val SUPPORTED_CATALOG_IDS_KEY = "supportedCatalogIds"
   const val INLINE_CATALOGS_KEY = "inlineCatalogs"
@@ -38,6 +42,7 @@ object A2uiConstants {
 
   const val VERSION_0_8 = "0.8"
   const val VERSION_0_9 = "0.9"
+  const val VERSION_0_9_1 = "0.9.1"
 
   const val A2UI_OPEN_TAG = "<a2ui-json>"
   const val A2UI_CLOSE_TAG = "</a2ui-json>"
